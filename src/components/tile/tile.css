@@ -11,13 +11,18 @@
     display: block;
     margin: 0 auto 20px;
     border: 0;
-    box-shadow: 0 0 5px rgba(13, 189, 51, 0.918);
     opacity: 0;
     animation-name: bounceIn;
     animation-duration: 450ms;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-delay: .5s;
+}
+
+.tile-image:hover {
+    box-shadow: 0 0 10px rgba(13, 189, 51, 0.918);
+    height: 202px;
+    width: 177px;
 }
 
 @keyframes bounceIn {

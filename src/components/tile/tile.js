@@ -4,35 +4,19 @@ import CssModules from 'react-css-modules';
 
 class Tile extends Component{
 
-    state = {
-        imgSrc: "",
-        wasClicked: false,
-    }
-
-    componentDidMount = () => {
-        this.setState({
-            imgSrc: this.props.imgSrc,
-        })
-    }
-
     handleClick = (event) => {
-        const wasClicked = this.state.wasClicked;
-
-        if(!wasClicked){
-            this.setState({
-                wasClicked: true,
-            })
-        }
-
         if(this.props.onGuess){
-            this.props.onGuess(wasClicked);
+            const {id} = this.props.tile;
+            this.props.onGuess(id);
         }
     };
 
     render() {
+        const {id, imgSrc} = this.props.tile;
         return (
             <div styleName='tile'>
-                <img src={this.state.imgSrc}
+                <img src={imgSrc}
+                    data-id={id}
                     alt="175x200"
                     styleName='tile-image'
                     onClick={this.handleClick}
