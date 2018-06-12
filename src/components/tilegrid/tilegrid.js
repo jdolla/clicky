@@ -5,9 +5,17 @@ import Tile from '../tile/tile';
 
 class Tilegrid extends Component{
 
+    state = {
+        modifier: 0,
+    }
+
+    componentWillReceiveProps = () => {
+        this.setState({
+            modifier: (this.state.modifier === 0) ? 13 : 0,
+        })
+    }
 
     shuffle = () => {
-        // let deck = this.state.tiles.slice();
         let deck = this.props.tiles.slice();
         for (let i = 0; i < deck.length; i++) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -17,7 +25,7 @@ class Tilegrid extends Component{
         return deck.map((tile, i) => {
             return(
                 <Tile tile={tile}
-                    key={i}
+                    key={i + this.state.modifier}
                     onGuess={this.props.onGuess}/>
             )
         });
@@ -25,6 +33,7 @@ class Tilegrid extends Component{
     }
 
     render(){
+
         return(
             <div styleName='tile-container'>
                 <div styleName='tile-board'>
