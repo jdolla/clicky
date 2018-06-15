@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import styles from './tilegrid.css';
-import CssModules from 'react-css-modules';
+import './tilegrid.css';
 import Tile from '../tile/tile';
 
 class Tilegrid extends Component{
@@ -35,8 +34,8 @@ class Tilegrid extends Component{
     render(){
 
         return(
-            <div styleName='tile-container'>
-                <div styleName='tile-board'>
+            <div className='tile-container'>
+                <div className='tile-board'>
                     {this.shuffle()}
                 </div>
             </div>
@@ -44,4 +43,4 @@ class Tilegrid extends Component{
     }
 }
 
-export default CssModules(Tilegrid, styles);
+export default Tilegrid;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import styles from './tile.css';
-import CssModules from 'react-css-modules';
+import './tile.css';
 
 class Tile extends Component{
 
@@ -14,11 +13,11 @@ class Tile extends Component{
     render() {
         const {id, imgSrc} = this.props.tile;
         return (
-            <div styleName='tile'>
+            <div className="tile">
                 <img src={imgSrc}
                     data-id={id}
                     alt="175x200"
-                    styleName='tile-image'
+                    className='tile-image'
                     onClick={this.handleClick}
                 />
             </div>
@@ -26,4 +25,4 @@ class Tile extends Component{
     };
 }
 
-export default CssModules(Tile, styles);
+export default Tile;

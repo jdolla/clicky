@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import styles from './header.css';
+import './header.css';
 
 class Header extends Component {
 
     render() {
         return (
-            <div className={styles.header}>
-                <div className={styles.logo}>Clicky Stuff!</div>
-                <div className={styles.scores}>
+            <div className="header">
+                <div className="logo">Clicky Stuff!</div>
+                <div className="scores">
                     <table>
                         <thead>
                             <tr>
