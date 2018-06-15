@@ -1,0 +1,39 @@
+.header {
+    min-width: 200px;
+    background-color: gray;
+    border: 3px solid green;
+    color: black;
+    margin: 5px 5px;
+    text-align: center;
+    padding: 5px 5px;
+}
+
+.logo {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.scores {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 205px;
+    text-align: center;
+}
+
+.scores>table {
+    border-collapse: collapse;
+    background-color: rgb(143, 138, 138);
+    border-radius: 5px;
+}
+
+.scores th {
+    color: rgba(0, 0, 0, 0.507);
+    padding: 5px 10px 0px 10px;
+    margin: 0;
+}
+
+.scores td {
+    color: rgba(0, 0, 0, 0.507);
+    padding-bottom: 5px;
+}
