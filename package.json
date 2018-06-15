@@ -2,6 +2,7 @@
   "name": "clicky",
   "version": "0.1.0",
   "private": true,
+  "homempage": "https://jdolla.github.io/clicky/clicky",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -46,7 +47,6 @@
     "webpack-manifest-plugin": "1.3.2",
     "whatwg-fetch": "2.0.3"
   },
-  "homempage": "https://jdolla.github.io/clicky/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
